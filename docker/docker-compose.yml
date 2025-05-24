@@ -1,9 +1,8 @@
-version: "3"
 services:
   app:
     build:
-      context: ../
-      dockerfile: docker/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     container_name: focalboard
     volumes:
       - fbdata:/opt/focalboard/data
