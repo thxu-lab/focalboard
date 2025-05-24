@@ -8,10 +8,23 @@ services:
     volumes:
       - fbdata:/opt/focalboard/data
     ports:
-      - 80:8000
+      - "${PORT}:8000"
     environment:
       - VIRTUAL_HOST=focalboard.local
       - VIRTUAL_PORT=8000
-
+      - SERVER_ROOT=${SERVER_ROOT}
+      - PORT=${PORT}
+      - DB_TYPE=${DB_TYPE}
+      - DB_CONFIG=${DB_CONFIG}
+      - USE_SSL=${USE_SSL}
+      - WEB_PATH=${WEB_PATH}
+      - FILES_PATH=${FILES_PATH}
+      - TELEMETRY=${TELEMETRY}
+      - PROMETHEUS_ADDRESS=${PROMETHEUS_ADDRESS}
+      - SESSION_EXPIRE_TIME=${SESSION_EXPIRE_TIME}
+      - SESSION_REFRESH_TIME=${SESSION_REFRESH_TIME}
+      - LOCAL_ONLY=${LOCAL_ONLY}
+      - ENABLE_LOCAL_MODE=${ENABLE_LOCAL_MODE}
+      - LOCAL_MODE_SOCKET_LOCATION=${LOCAL_MODE_SOCKET_LOCATION}
 volumes:
   fbdata:
