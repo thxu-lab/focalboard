@@ -1,8 +1,6 @@
 services:
   app:
-    build:
-      context: ../
-      dockerfile: ./docker/Dockerfile
+    image: mattermost/focalboard
     container_name: focalboard
     volumes:
       - fbdata:/opt/focalboard/data
