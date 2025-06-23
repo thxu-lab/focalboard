@@ -4,6 +4,7 @@ services:
     container_name: focalboard
     volumes:
       - fbdata:/opt/focalboard/data
+      - ./config.json:/app/config.json
     ports:
       - "${PORT}:8000"
     environment:
@@ -25,3 +26,4 @@ services:
       - LOCAL_MODE_SOCKET_LOCATION=${LOCAL_MODE_SOCKET_LOCATION}
 volumes:
   fbdata:
+  
