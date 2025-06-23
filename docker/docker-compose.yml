@@ -4,7 +4,7 @@ services:
     container_name: focalboard
     volumes:
       - fbdata:/opt/focalboard/data
-      - ./config.json:/app/focalboard/config.json
+      - /app/focalboard/config.json:/opt/focalboard/config.json
     ports:
       - "${PORT}:8000"
     environment:
